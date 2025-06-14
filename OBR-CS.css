@@ -6,6 +6,14 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
+tr {
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1.1rem;
+}
+
 /* grid container */
 .holy-grail-grid {
     display: grid;
