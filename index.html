@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>OBR Character Sheet</title>
     <link rel="stylesheet" href="OBR-CS.css">
+    <script defer src="script.js"></script>
 </head>
 
 <div class="holy-grail-grid">
@@ -18,27 +19,33 @@
             </tr>
             <tr>
                 <td>STR</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="strScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="strScore" onchange="setLocalStorage()">
+                </td>
             </tr>
             <tr>
                 <td>DEX</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="dexScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="dexScore" onchange="setLocalStorage()">
+                </td>
             </tr>
             <tr>
                 <td>CON</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="conScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="conScore" onchange="setLocalStorage()">
+                </td>
             </tr>
             <tr>
                 <td>INT</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="intScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="intScore" onchange="setLocalStorage()">
+                </td>
             </tr>
             <tr>
                 <td>WIS</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="wisScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="wisScore" onchange="setLocalStorage()">
+                </td>
             </tr>
             <tr>
                 <td>CHA</td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="chaScore"></td>
+                <td><input type="number" placeholder="0" min="0" max="10" id="chaScore" onchange="setLocalStorage()">
+                </td>
 
             </tr>
         </table>
