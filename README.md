@@ -1,1 +1,1 @@
-# Basic RPG Charater Sheet
+# Basic RPG Character Sheet
