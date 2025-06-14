@@ -1,6 +1,6 @@
 function getStoredValues() {
     // Set player level
-    document.getElementById("playerLevel").value = localStorage.getItem("playerLevel");
+    // document.getElementById("playerLevel").value = localStorage.getItem("playerLevel");
 
     // Set ability scores
     document.getElementById("strScore").value = localStorage.getItem("strScore");
@@ -11,16 +11,16 @@ function getStoredValues() {
     document.getElementById("chaScore").value = localStorage.getItem("chaScore");
 
     // Set AC
-    document.getElementById("armorClass").value = localStorage.getItem("armorClass");
+    // document.getElementById("armorClass").value = localStorage.getItem("armorClass");
 
     // Set HP
-    document.getElementById("maxHP").value = localStorage.getItem("maxHP");
+    // document.getElementById("maxHP").value = localStorage.getItem("maxHP");
 
 }
 
 function setLocalStorage() {
     // Save player level
-    localStorage.setItem("playerLevel", document.getElementById("playerLevel").value);
+    // localStorage.setItem("playerLevel", document.getElementById("playerLevel").value);
 
     // Save ability scores
     localStorage.setItem("strScore", document.getElementById("strScore").value);
@@ -31,10 +31,10 @@ function setLocalStorage() {
     localStorage.setItem("chaScore", document.getElementById("chaScore").value);
 
     // Save AC
-    localStorage.setItem("armorClass", document.getElementById("armorClass").value);
+    // localStorage.setItem("armorClass", document.getElementById("armorClass").value);
 
     // Save HP
-    localStorage.setItem("maxHP", document.getElementById("maxHP").value);
+    // localStorage.setItem("maxHP", document.getElementById("maxHP").value);
 
     // debug log
     var i;
