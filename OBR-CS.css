@@ -6,18 +6,14 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
-.btn {
-    border-radius: 5px;
-}
-
-tr {
+table {
     font-size: 1.2rem;
 }
 
 input[type='number'] {
     font-family: "Arial Black", sans-serif;
     text-align: center;
-    width: 2.5rem;
+    width: 3.5rem;
     height: 1.2rem;
 }
 
