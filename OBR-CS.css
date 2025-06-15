@@ -10,10 +10,15 @@ table {
     font-size: 1.2rem;
 }
 
+th {
+    padding-bottom: 0.25rem;
+    padding-right: 0.5rem;
+}
+
 input[type='number'] {
     font-family: "Arial Black", sans-serif;
     text-align: center;
-    width: 3.5rem;
+    width: 3rem;
     height: 1.2rem;
 }
 
