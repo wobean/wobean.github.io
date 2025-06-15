@@ -18,66 +18,143 @@
 
 <div class="holy-grail-grid">
     <header class="header">Character Name</header>
-    <main class="main-content">Main Content</main>
-    <section class="left-sidebar">
-        <table class="table">
-            <tr>
-                <th colspan="2">
-                    <center>ABILITY SCORES</center>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-1"></i>
-                    &thinsp; STR
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="strScore" onchange="setLocalStorage()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-2"></i>
-                    &thinsp; DEX
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="dexScore" onchange="setLocalStorage()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-3"></i>
-                    &thinsp; CON &thinsp;
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="conScore" onchange="setLocalStorage()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-4"></i>
-                    &thinsp; INT
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="intScore" onchange="setLocalStorage()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-5"></i>
-                    &thinsp; WIS
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="wisScore" onchange="setLocalStorage()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <i class="bi bi-dice-6"></i>
-                    &thinsp; CHA
-                </td>
-                <td><input type="number" placeholder="0" min="0" max="10" id="chaScore" onchange="setLocalStorage()">
-                </td>
 
-            </tr>
-        </table>
+    <main class="main-content">
+        <center>
+            <b>INVENTORY</b>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="check-1" value="1" checked></td>
+                        <td><input type="text" name="slot-1" placeholder="Slot 1" size="30"></td>
+                        <td> &emsp; </td>
+                        <td><input type="checkbox" name="check-11" value="1"></td>
+                        <td><input type="text" name="slot-11" placeholder="Slot 11" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </main>
+
+    <section class="left-sidebar">
+        <center>
+            <b>ABILITY SCORES</b>
+            <table class="table">
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-1"></i>
+                        &thinsp; STR
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="strScore"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-2"></i>
+                        &thinsp; DEX
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="dexScore"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-3"></i>
+                        &thinsp; CON &thinsp;
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="conScore"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-4"></i>
+                        &thinsp; INT
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="intScore"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-5"></i>
+                        &thinsp; WIS
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="wisScore"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="bi bi-dice-6"></i>
+                        &thinsp; CHA
+                    </td>
+                    <td><input type="number" placeholder="0" min="0" max="10" id="chaScore"
+                            onchange="setLocalStorage()">
+                    </td>
+
+                </tr>
+            </table>
+        </center>
     </section>
-    <aside class="right-sidebar">Right Sidebar</aside>
+    <aside class="right-sidebar">
+        <center><b>SIDEBAR</b></center>
+    </aside>
     <footer class="footer">Footer</footer>
 </div>
 

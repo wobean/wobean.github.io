@@ -1,8 +1,8 @@
 body {
-    font-family: Optima;
-    font-weight: normal;
+    font-family: copperplate;
+    font-weight:lighter;
     font-size: calc(15px + 0.390625vw);
-    padding: calc(2px + 0.5625vw);
+    padding: calc(0px + 0.5625vw);
     background: rgba(250, 225, 112, 0.25);
 }
 
@@ -11,15 +11,27 @@ table {
 }
 
 th {
-    padding-bottom: 0.25rem;
-    padding-right: 0.5rem;
+    margin-bottom: 50px;
 }
 
 input[type='number'] {
-    font-family: "Arial Black", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
     text-align: center;
     width: 3rem;
     height: 1.2rem;
+}
+
+input[type='text'] {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 1.1rem;
+    width: 99%;
+}
+
+input[type='checkbox'] {
+    width: 1.5rem;
+    height: 1.3rem;
+    vertical-align: -50%
 }
 
 /* grid container */
@@ -44,14 +56,14 @@ input[type='number'] {
     background: #f97171;
 }
 
-.holy-grail-grid>.main-content {
-    grid-area: main-content;
-    background: #fff;
-}
-
 .holy-grail-grid>.left-sidebar {
     grid-area: left-sidebar;
     background: #f5d55f;
+}
+
+.holy-grail-grid>.main-content {
+    grid-area: main-content;
+    background: #fff;
 }
 
 .holy-grail-grid>.right-sidebar {
@@ -65,13 +77,13 @@ input[type='number'] {
 }
 
 /* tablet breakpoint */
-@media (min-width:768px) {
+@media (min-width:400px) {
     .holy-grail-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             'header header'
-            'main-content main-content'
             'left-sidebar right-sidebar'
+            'main-content main-content'
             'footer footer';
     }
 }
@@ -79,10 +91,9 @@ input[type='number'] {
 /* desktop breakpoint */
 @media (min-width:1024px) {
     .holy-grail-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            'header header header header'
-            'left-sidebar main-content main-content right-sidebar'
-            'footer footer footer footer';
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 'header header header header header'
+            'left-sidebar main-content main-content main-content right-sidebar'
+            'footer footer footer footer footer';
     }
 }
