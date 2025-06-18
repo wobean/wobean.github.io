@@ -1,8 +1,9 @@
 const ability = ["strScore", "dexScore", "conScore", "intScore", "wisScore", "chaScore",];
-
 const slot = [];
+const box = [];
 for (let i = 1; i <= 20; i++) {
     slot.push("slot-" + i);
+    box.push("check-" + i);
 }
 
 function getStoredValues() {
@@ -19,6 +20,12 @@ function getStoredValues() {
     slot.forEach(slotItem);
     function slotItem(item) {
         document.getElementById(item).value = localStorage.getItem(item);
+    }
+
+    //Set checkbox states
+    box.forEach(boxItem);
+    function boxItem(item) {
+        document.getElementById(item).checked = localStorage.getItem(item) === 'true' ? true : false;
     }
 
     // Set AC
@@ -45,6 +52,12 @@ function setLocalStorage() {
         localStorage.setItem(item, document.getElementById(item).value);
     }
 
+    // Save checkbox states
+    box.forEach(boxItem);
+    function boxItem(item) {
+        localStorage.setItem(item, document.getElementById(item).checked);
+    }
+
     // Save AC
     // localStorage.setItem("armorClass", document.getElementById("armorClass").value);
 
@@ -53,7 +66,6 @@ function setLocalStorage() {
 
     // debug log
     var i;
-    console.log("local storage");
     for (i = 0; i < localStorage.length; i++) {
         console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
     }
