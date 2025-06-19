@@ -158,7 +158,7 @@
                     <i class="bi bi-dice-1"></i>
                     &thinsp; STR
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="strScore" onchange="setLocalStorage()">
+                <td><input type="number" id="strScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
@@ -167,7 +167,7 @@
                     <i class="bi bi-dice-2"></i>
                     &thinsp; DEX
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="dexScore" onchange="setLocalStorage()">
+                <td><input type="number" id="dexScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
@@ -176,7 +176,7 @@
                     <i class="bi bi-dice-3"></i>
                     &thinsp; CON
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="conScore" onchange="setLocalStorage()">
+                <td><input type="number" id="conScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
@@ -185,7 +185,7 @@
                     <i class="bi bi-dice-4"></i>
                     &thinsp; INT
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="intScore" onchange="setLocalStorage()">
+                <td><input type="number" id="intScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
@@ -194,7 +194,7 @@
                     <i class="bi bi-dice-5"></i>
                     &thinsp; WIS
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="wisScore" onchange="setLocalStorage()">
+                <td><input type="number" id="wisScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
@@ -203,49 +203,60 @@
                     <i class="bi bi-dice-6"></i>
                     &thinsp; CHA
                 </td>
-                <td><input type="number" value="0" min="0" max="10" id="chaScore" onchange="setLocalStorage()">
+                <td><input type="number" id="chaScore" value="0" min="0" max="10" onchange="setLocalStorage()">
                 </td>
             </tr>
         </table>
     </section>
     <aside class="right-sidebar">
         <center>
-            <th colspan="2"><b>STATS</b></th>
             <table>
                 <tr>
-                    <td>Level</td>
-                    <td><input type="number" value="1" min="1" max="10" id="level" onchange="setLocalStorage()"></td>
-                </tr>
-                <tr>
-                    <td>XP</td>
-                    <td><input type="text" id="xp" style="width: 4rem;" placeholder="XP" tabindex="1"
+                    <td style="text-align: right;">Level &ensp;</td>
+                    <td><input type="number" id="level" value="1" min="1" max="10" tabindex="51"
                             onchange="setLocalStorage()"></td>
                 </tr>
                 <tr>
-                    <td>Max HP</td>
-                    <td><input type="number" value="1" min="1" max="99" id="maxHp" onchange="setLocalStorage()"></td>
+                    <td style="text-align: right;">XP &ensp;</td>
+                    <td><input type="text" id="xp" style="width: 4rem;" tabindex="52" onchange="setLocalStorage()"></td>
+                </tr>
+                <tr style="line-height: 0.7em;">
+                    <td>&emsp;</td>
                 </tr>
                 <tr>
-                    <td>AC</td>
-                    <td><input type="number" value="11" min="0" max="99" id="ac" onchange="setLocalStorage()"></td>
-                </tr>
-                <tr>
-                    <td>Speed</td>
-                    <td><input type="text" id="speed" style="width: 4rem;" placeholder="Speed" tabindex="1"
+                    <td style="text-align: right;">Max HP &ensp;</td>
+                    <td><input type="number" id="maxHp" value="1" min="1" max="75" tabindex="53"
                             onchange="setLocalStorage()"></td>
                 </tr>
                 <tr>
-                    <td>Career 1</td>
+                    <td style="text-align: right;">AC &ensp;</td>
+                    <td><input type="number" id="ac" value="11" min="0" max="30" tabindex="54"
+                            onchange="setLocalStorage()"></td>
+                </tr>
+                <tr style="line-height: 0.7em;">
+                    <td>&emsp;</td>
                 </tr>
                 <tr>
-                    <td colspan=2><input type="text" id="career1" placeholder="Career 1" tabindex="20"
+                    <td style="text-align: right;">Speed &ensp;</td>
+                    <td><input type="text" id="speed" style="width: 2.75rem;" tabindex="55"
+                            onchange="setLocalStorage()">
+                    </td>
+                </tr>
+                <tr style="line-height: 0.7em;">
+                    <td>&emsp;</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="text-align: center;">Career 1</td>
+                </tr>
+                <tr>
+                    <td colspan=2><input type="text" id="career1" style="width: 95%;" tabindex="56"
                             onchange="setLocalStorage()"></td>
                 </tr>
                 <tr>
-                    <td>Career 2</td>
+                    <td colspan=2 style="text-align: center;">Career 2</td>
                 </tr>
                 <tr>
-                    <td colspan=2><input type="text" id="career2" placeholder="Career 2" tabindex="20"
+                    <td colspan=2><input type="text" id="career2" style="width: 95%;" tabindex="57"
                             onchange="setLocalStorage()"></td>
                 </tr>
             </table>
