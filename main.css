@@ -6,10 +6,9 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
-h2,
-{
-margin-top: 0;
-margin-bottom: 0.5rem;
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 table {
