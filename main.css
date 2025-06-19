@@ -6,18 +6,19 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
-h2 {
+h2,
+h4 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 table {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 input[type='number'] {
-    font-weight: 600;
-    font-size: 1rem;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 1.1rem;
     text-align: center;
     width: 2.5rem;
     height: 1.2rem;
