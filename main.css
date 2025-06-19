@@ -60,11 +60,17 @@ input[type='text'] {
 }
 
 name {
+    flex: 3;
+}
+
+logo {
     flex: 2;
+    text-align: center;
+    justify-content: center;
 }
 
 user {
-    flex: 2;
+    flex: 3;
     text-align: right;
 }
 
