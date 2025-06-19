@@ -6,6 +6,22 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
 table {
     font-size: 1.2rem;
 }
@@ -48,8 +64,19 @@ input[type='text'] {
 
 /* assign columns to grid areas */
 .holy-grail-grid>.header {
+    display: flex;
+    flex-flow: row nowrap;
     grid-area: header;
     background: #f97171;
+}
+
+name {
+    flex: 2;
+}
+
+user {
+    flex: 2;
+    text-align: right;
 }
 
 .holy-grail-grid>.left-sidebar {
