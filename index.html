@@ -209,7 +209,35 @@
         </table>
     </section>
     <aside class="right-sidebar">
-        <center><b>SIDEBAR</b></center>
+        <center>
+            <th colspan="2"><b>STATS</b></th>
+            <table>
+                <tr>
+                    <td>Level</td>
+                    <td><input type="number" value="1" min="1" max="10" id="level" onchange="setLocalStorage()"></td>
+                </tr>
+                <tr>
+                    <td>XP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Max HP</td>
+                    <td><input type="number" value="1" min="1" max="99" id="HP" onchange="setLocalStorage()"></td>
+                </tr>
+                <tr>
+                    <td>AC</td>
+                    <td><input type="number" value="0" min="0" max="10" id="AC" onchange="setLocalStorage()"></td>
+                </tr>
+                <tr>
+                    <td>Career 1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Career 2</td>
+                    <td></td>
+                </tr>
+            </table>
+        </center>
     </aside>
     <footer class="footer">Footer</footer>
 </div>
