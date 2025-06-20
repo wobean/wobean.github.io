@@ -7,8 +7,11 @@ for (let i = 1; i <= 20; i++) {
 }
 
 function getStoredValues() {
-    // Set player level
-    // document.getElementById("playerLevel").value = localStorage.getItem("playerLevel");
+    // Set names and careers
+    document.getElementById("charName").value = localStorage.getItem("charName");
+    document.getElementById("playerName").value = localStorage.getItem("playerName");
+    document.getElementById("career1").value = localStorage.getItem("career1");
+    document.getElementById("career2").value = localStorage.getItem("career2");
 
     // Set ability scores
     ability.forEach(abilityItem);
@@ -28,17 +31,19 @@ function getStoredValues() {
         document.getElementById(item).checked = localStorage.getItem(item) === 'true' ? true : false;
     }
 
-    // Set AC
-    // document.getElementById("armorClass").value = localStorage.getItem("armorClass");
-
-    // Set HP
-    // document.getElementById("maxHP").value = localStorage.getItem("maxHP");
+    // Set combat stats
+    document.getElementById("maxHp").value = localStorage.getItem("maxHp");
+    document.getElementById("ac").value = localStorage.getItem("ac");
+    document.getElementById("speed").value = localStorage.getItem("speed");
 
 }
 
 function setLocalStorage() {
-    // Save player level
-    // localStorage.setItem("playerLevel", document.getElementById("playerLevel").value);
+    // Save names and careers
+    localStorage.setItem("charName", document.getElementById("charName").value);
+    localStorage.setItem("playerName", document.getElementById("playerName").value);
+    localStorage.setItem("career1", document.getElementById("career1").value);
+    localStorage.setItem("career2", document.getElementById("career2").value);
 
     // Save ability scores
     ability.forEach(abilityItem);
@@ -58,11 +63,10 @@ function setLocalStorage() {
         localStorage.setItem(item, document.getElementById(item).checked);
     }
 
-    // Save AC
-    // localStorage.setItem("armorClass", document.getElementById("armorClass").value);
-
-    // Save HP
-    // localStorage.setItem("maxHP", document.getElementById("maxHP").value);
+    // Save combat stats
+    localStorage.setItem("maxHp", document.getElementById("maxHp").value);
+    localStorage.setItem("ac", document.getElementById("ac").value);
+    localStorage.setItem("speed", document.getElementById("speed").value);
 
     // debug log
     var i;
