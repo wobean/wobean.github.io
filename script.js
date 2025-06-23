@@ -6,6 +6,12 @@ for (let i = 1; i <= 20; i++) {
     box.push("check-" + i);
 }
 
+function initializePage() {
+    localStorage.clear();
+    window.location.reload();
+}
+
+
 function getStoredValues() {
     // Set names and careers
     document.getElementById("charName").value = localStorage.getItem("charName");
