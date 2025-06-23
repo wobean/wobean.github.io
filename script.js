@@ -7,22 +7,30 @@ for (let i = 1; i <= 20; i++) {
 }
 
 function initializePage() {
-    localStorage.clear();
+    // Set names and careers to defaults
+    document.getElementById("charName").value = localStorage.getItem("");
+    document.getElementById("playerName").value = localStorage.getItem("");
+    document.getElementById("career1").value = localStorage.getItem("");
+    document.getElementById("career2").value = localStorage.getItem("");
 
-    //Set all fields to defaults
+    //Set ability scores to defaults
     ability.forEach(abilityItem);
     function abilityItem(item) {
         document.getElementById(item).value = "0";
     }
-    
-    box.forEach(boxItem);
-    function boxItem(item) {
-        document.getElementById(item).checked = "checked";
+
+    //Set inventory fields to defaults
+    for (let i = 0; i < 10; i++) {
+        document.getElementById(box[i]).checked = true;
+        document.getElementById(box[i + 10]).checked = false;
+        document.getElementById(slot[i]).value = "";
+        document.getElementById(slot[i + 10]).value = "";
     }
 
+    //Set remaining fields to defaults
     document.getElementById("level").value = "1";
     document.getElementById("xp").value = "0";
-    document.getElementById("maxHp").value = "1";
+    document.getElementById("maxHp").value = "3";
     document.getElementById("ac").value = "11";
     document.getElementById("speed").value = "30";
 
@@ -57,6 +65,8 @@ function getStoredValues() {
     }
 
     // Set combat stats
+    document.getElementById("level").value = localStorage.getItem("level");
+    document.getElementById("xp").value = localStorage.getItem("xp");
     document.getElementById("maxHp").value = localStorage.getItem("maxHp");
     document.getElementById("ac").value = localStorage.getItem("ac");
     document.getElementById("speed").value = localStorage.getItem("speed");
@@ -89,14 +99,10 @@ function setLocalStorage() {
     }
 
     // Save combat stats
+    localStorage.setItem("level", document.getElementById("level").value);
+    localStorage.setItem("xp", document.getElementById("xp").value);
     localStorage.setItem("maxHp", document.getElementById("maxHp").value);
     localStorage.setItem("ac", document.getElementById("ac").value);
     localStorage.setItem("speed", document.getElementById("speed").value);
-
-    // debug log
-    var i;
-    for (i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-    }
 
 }

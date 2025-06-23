@@ -36,6 +36,15 @@ input[type='text'] {
     width: 100%;
 }
 
+button {
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 1.1rem;
+    width: 10%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
 /* grid container */
 .holy-grail-grid {
     display: grid;
