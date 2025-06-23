@@ -8,6 +8,25 @@ for (let i = 1; i <= 20; i++) {
 
 function initializePage() {
     localStorage.clear();
+
+    //Set all fields to defaults
+    ability.forEach(abilityItem);
+    function abilityItem(item) {
+        document.getElementById(item).value = "0";
+    }
+    
+    box.forEach(boxItem);
+    function boxItem(item) {
+        document.getElementById(item).checked = "checked";
+    }
+
+    document.getElementById("level").value = "1";
+    document.getElementById("xp").value = "0";
+    document.getElementById("maxHp").value = "1";
+    document.getElementById("ac").value = "11";
+    document.getElementById("speed").value = "30";
+
+    setLocalStorage();
     window.location.reload();
 }
 
