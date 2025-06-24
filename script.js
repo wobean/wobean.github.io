@@ -106,3 +106,26 @@ function setLocalStorage() {
     localStorage.setItem("speed", document.getElementById("speed").value);
 
 }
+
+function exportChar() {
+    // Get the data from local storage
+    const data = JSON.stringify(localStorage);
+
+    // Parse the data
+    const jsonData = JSON.parse(data);
+
+    // Export the data to a JSON file
+    const jsonString = JSON.stringify(jsonData, null, 3);
+
+    // Write the data to a file
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'char_sheet.json';
+    a.click();
+}
+
+function importChar() {
+
+}
