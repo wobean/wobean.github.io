@@ -108,16 +108,16 @@ function setLocalStorage() {
 }
 
 function exportChar() {
-    // Get the data from local storage
+    // Get data from local storage
     const data = JSON.stringify(localStorage);
 
-    // Parse the data
+    // Parse data
     const jsonData = JSON.parse(data);
 
-    // Export the data to a JSON file
+    // Export data to a JSON file
     const jsonString = JSON.stringify(jsonData, null, 3);
 
-    // Write the data to a file
+    // Write data to JSON file
     const blob = new Blob([jsonString], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -129,3 +129,17 @@ function exportChar() {
 function importChar() {
 
 }
+
+document.querySelector("#read-button").addEventListener('click', function () {
+    let file = document.querySelector("#file-input").files[0];
+    let reader = new FileReader();
+    reader.addEventListener('load', function (e) {
+        let res = e.target.result;
+        const obj = JSON.parse(res);
+        Object.keys(obj).forEach(function (k) {
+            localStorage.setItem(k, obj[k]);
+        });
+        window.location.reload();
+    });
+    reader.readAsText(file);
+});
