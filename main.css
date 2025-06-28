@@ -16,8 +16,44 @@ table {
     font-size: 1.3rem;
 }
 
+.button:hover {
+    background: rgb(225, 225, 225);
+}
+
+.alt-btn:hover {
+    background: rgb(225, 225, 225);
+}
+
+.alt-btn {
+    font-family: "Arial Narrow";
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 2.4px;
+    width: 9.5%;
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid;
+    border-radius: 1rem;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.hide-file {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
 input[type='number'] {
-    font-family: "Arial Narrow", sans-serif;
+    font-family: "Arial Narrow";
     font-size: 1.1rem;
     text-align: center;
     width: 2.5rem;
@@ -27,7 +63,7 @@ input[type='number'] {
 input[type='checkbox'] {
     width: 1.5rem;
     height: 1.3rem;
-    vertical-align: -50%
+    vertical-align: -50%;
 }
 
 input[type='text'] {
@@ -44,6 +80,7 @@ button {
     background-color: rgb(255, 255, 255);
     border: 0.5px solid;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 /* grid container */
@@ -70,17 +107,17 @@ button {
     background: #f97171;
 }
 
-name {
+.holy-grail-grid>.name {
     flex: 3;
 }
 
-logo {
+.holy-grail-grid>.logo {
     flex: 2;
     text-align: center;
     vertical-align: bottom;
 }
 
-user {
+.holy-grail-grid>.user {
     flex: 3;
     text-align: right;
 }
