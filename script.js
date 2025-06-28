@@ -130,8 +130,11 @@ function importChar() {
 
 }
 
-document.querySelector("#read-button").addEventListener('click', function () {
-    let file = document.querySelector("#import-char").files[0];
+// Load character sheet data from local file
+const fileInput = document.getElementById('importChar');
+fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    // console.log(file);
     let reader = new FileReader();
     reader.addEventListener('load', function (e) {
         let res = e.target.result;
