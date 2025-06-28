@@ -131,7 +131,7 @@ function importChar() {
 }
 
 document.querySelector("#read-button").addEventListener('click', function () {
-    let file = document.querySelector("#file-input").files[0];
+    let file = document.querySelector("#import-char").files[0];
     let reader = new FileReader();
     reader.addEventListener('load', function (e) {
         let res = e.target.result;

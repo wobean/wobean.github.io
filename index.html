@@ -17,24 +17,24 @@
 
 
 <div class="holy-grail-grid">
-    <header class="header">
-        <name>
+    <div class="title">
+        <div class="name">
             <h2 style="text-align: center;">Character</h2>
             <div align="center">
                 <input type="text" id="charName" style="width: 70%; text-align: center;" placeholder="Character Name"
                     tabindex="1" onchange="setLocalStorage()">
             </div>
-        </name>
-        <logo>
+        </div>
+        <div class="logo">
             <img src="/assets/knave-2e-logo.webp" alt="knave-2e-logo" height="63rem">
-        </logo>
-        <user>
+        </div>
+        <div class="user">
             <h2 style="text-align: center;">Player</h2>
             <div align="center"><input type="text" id="playerName" style="width: 70%; text-align: center;"
                     placeholder="Player Name" tabindex="1" onchange="setLocalStorage()">
             </div>
-        </user>
-    </header>
+        </div>
+    </div>
 
     <main class="main-content">
 
@@ -269,8 +269,8 @@
     <footer class="footer">
         <button class="button" onclick=initializePage()> Initialize </button>
         <button class="button" onclick=exportChar()> Export </button>
-        <div class="alt-btn"> Choose File <input type="file" class="hide-file"></div>
-        <button class="button" id="read-button"> Import </button>
+        <input type="file" id="import-char" hidden />
+        <label class="alt-btn" id="read-button" for="import-char"> Import </label>
     </footer>
 </div>
 
