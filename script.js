@@ -5,9 +5,6 @@ for (let i = 1; i <= 20; i++) {
     slot.push("slot-" + i);
     box.push("check-" + i);
 }
-const str = "Acolyte,Acrobat,Actor,Alchemist,Antiquarian,Arcanist,Architect,Assassin,Astrologer,Baker,Bandit,Barber,Beast Tamer,Beekeeper,Blacksmith,Boatman,Bookbinder,Brewer,Burglar,Butcher,Candlemaker,Carpenter,Charlatan,Cobbler,Coachman,Cook,Courier,Courtier,Cultist,Cutpurse,Dyer,Explorer,Falconer,Fence,Fisherman,Folklorist,Gambler,Gamekeeper,Gardener,Grave Robber,Gravedigger,Groom,Guard,Headsman,Herbalist,Hermit,Hunter,Innkeeper,Inquisitor,Investigator,Jailer,Jester,Jeweler,Knight,Kidnapper,Lawyer,Locksmith,Mason,Merchant,Miner,Musician,Naturalist,Officer,Oracle,Orator,Painter,Peddler,Philosopher,Physician,Pilgrim,Pirate,Pit Fighter,Playwright,Poacher,Poet,Priest,Prospector,Puppeteer,Catcher,Saboteur,Sailor,Scout,Scribe,Sculptor,Servant,Shepherd,Shipwright,Singer,Smuggler,Soldier,Spy,Squire,Tailor,Tattooist,Thieftaker,Thug,Torturer,Trapper,Watchman,Woodcutter";
-const careers = Array.from(str.split(","));
-console.log(careers);
 
 function initializePage() {
     // Set names and careers to defaults
@@ -110,6 +107,30 @@ function setLocalStorage() {
 
 }
 
+const str = "Acolyte,Acrobat,Actor,Alchemist,Antiquarian,Arcanist,Architect,Assassin,Astrologer,Baker,Bandit,Barber,Beast Tamer,Beekeeper,Blacksmith,Boatman,Bookbinder,Brewer,Burglar,Butcher,Candlemaker,Carpenter,Charlatan,Cobbler,Coachman,Cook,Courier,Courtier,Cultist,Cutpurse,Dyer,Explorer,Falconer,Fence,Fisherman,Folklorist,Gambler,Gamekeeper,Gardener,Grave Robber,Gravedigger,Groom,Guard,Headsman,Herbalist,Hermit,Hunter,Innkeeper,Inquisitor,Investigator,Jailer,Jester,Jeweler,Knight,Kidnapper,Lawyer,Locksmith,Mason,Merchant,Miner,Musician,Naturalist,Officer,Oracle,Orator,Painter,Peddler,Philosopher,Physician,Pilgrim,Pirate,Pit Fighter,Playwright,Poacher,Poet,Priest,Prospector,Puppeteer,Catcher,Saboteur,Sailor,Scout,Scribe,Sculptor,Servant,Shepherd,Shipwright,Singer,Smuggler,Soldier,Spy,Squire,Tailor,Tattooist,Thieftaker,Thug,Torturer,Trapper,Watchman,Woodcutter";
+const careers = Array.from(str.split(","));
+
+var select = document.getElementById("career1");
+
+for (var i = 0; i < 100; i++) {
+    var opt = careers[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = i;
+    select.appendChild(el);
+}
+
+var select = document.getElementById("career2");
+
+for (var i = 0; i < 100; i++) {
+    var opt = careers[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = i;
+    select.appendChild(el);
+}
+
+// Export character sheet data to local file
 function exportChar() {
     // Get data from local storage
     const data = JSON.stringify(localStorage);
@@ -129,11 +150,7 @@ function exportChar() {
     a.click();
 }
 
-function importChar() {
-
-}
-
-// Load character sheet data from local file
+// Import character sheet data from local file
 const fileInput = document.getElementById('importChar');
 fileInput.addEventListener('change', (event) => {
     const file = event.target.files[0];

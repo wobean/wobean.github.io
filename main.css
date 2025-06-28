@@ -34,7 +34,6 @@ input[type='checkbox'] {
 input[type='text'] {
     font-family: "Arial Narrow", sans-serif;
     font-size: 1.1rem;
-    /* width: 100%; */
 }
 
 button {
@@ -114,6 +113,15 @@ button:hover {
 
 .user {
     flex: 2;
+}
+
+select {
+    font-family: copperplate;
+    font-size: 1.25rem;
+    width: 10rem;
+    text-align-last: center;
+    padding-right: 29px;
+    margin-bottom: 0.15rem;
 }
 
 .left-sidebar {
