@@ -22,6 +22,7 @@ input[type='number'] {
     text-align: center;
     width: 2.5rem;
     height: 1.2rem;
+    padding-left: .6rem;
 }
 
 input[type='checkbox'] {
@@ -33,7 +34,7 @@ input[type='checkbox'] {
 input[type='text'] {
     font-family: "Arial Narrow", sans-serif;
     font-size: 1.1rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
 button {
@@ -49,7 +50,7 @@ button {
     padding: 2.4px;
 }
 
-.button:hover {
+button:hover {
     background: black;
     border-color: black;
     font-weight: bold;
@@ -94,7 +95,7 @@ button {
 }
 
 /* assign columns to grid areas */
-.title {
+.header {
     display: flex;
     flex-flow: row nowrap;
     grid-area: header;
@@ -115,7 +116,7 @@ button {
     flex: 2;
 }
 
-.holy-grail-grid>.left-sidebar {
+.left-sidebar {
     grid-area: left-sidebar;
     background: #f5d55f;
     display: flex;
@@ -123,7 +124,7 @@ button {
     justify-content: center;
 }
 
-.holy-grail-grid>.main-content {
+.main-content {
     grid-area: main-content;
     background: #fff;
     display: flex;
@@ -131,7 +132,7 @@ button {
     justify-content: center;
 }
 
-.holy-grail-grid>.right-sidebar {
+.right-sidebar {
     grid-area: right-sidebar;
     background: #c5ed77;
     display: flex;
@@ -139,9 +140,11 @@ button {
     justify-content: center;
 }
 
-.holy-grail-grid>.footer {
+.footer {
     grid-area: footer;
     background: #72c2f1;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* tablet breakpoint */

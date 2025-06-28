@@ -17,7 +17,7 @@
 
 
 <div class="holy-grail-grid">
-    <div class="title">
+    <div class="header">
         <div class="name">
             <h2 style="text-align: center;">Character</h2>
             <div align="center">
@@ -225,7 +225,7 @@
                 </tr>
                 <tr>
                     <td style="text-align: right;">XP &ensp;</td>
-                    <td><input type="text" id="xp" style="width: 2.5rem; text-align: center;" tabindex="52"
+                    <td><input type="text" id="xp" style="width: 2.7rem; text-align: center;" tabindex="52"
                             onchange="setLocalStorage()"></td>
                 </tr>
                 <tr style="line-height: 0.7em;">
@@ -242,7 +242,7 @@
                 </tr>
                 <tr>
                     <td style="text-align: right;">Speed &ensp;</td>
-                    <td><input type="text" id="speed" style="width: 2.5rem; text-align: center;" tabindex="55"
+                    <td><input type="text" id="speed" style="width: 2.7rem; text-align: center;" tabindex="55"
                             onchange="setLocalStorage()">
                     </td>
                 </tr>
@@ -267,8 +267,8 @@
         </center>
     </aside>
     <footer class="footer">
-        <button class="button" onclick=initializePage()> Initialize </button>
-        <button class="button" onclick=exportChar()> Export </button>
+        <div><button class="button" onclick=initializePage()> Initialize </button></div>
+        <div><button class="button" onclick=exportChar()> Export </button></div>
         <input type="file" id="importChar" accept=".json" hidden />
         <label class="alt-btn" id="readButton" for="importChar"> Import </label>
     </footer>
