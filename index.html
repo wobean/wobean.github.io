@@ -250,18 +250,18 @@
                     <td>&emsp;</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="text-align: center;">Careers</td>
+                    <td colspan=2 style="text-align: center;"><b>Careers</b></td>
                 </tr>
                 <tr>
                     <td colspan=2>
-                        <select class="careers" id="career1">
+                        <select class="careers" id="career1" onchange="setLocalStorage()"">
                             <option value="" selected> Choose 1st Career </option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td colspan=2>
-                        <select class="careers" id="career2">
+                        <select class=" careers" id="career2" onchange="setLocalStorage()"">
                             <option value="" selected> Choose 2nd Career </option>
                         </select>
                     </td>
@@ -269,12 +269,12 @@
             </table>
         </center>
     </aside>
-    <footer class="footer">
-        <div><button class="button" onclick=initializePage()> Initialize </button></div>
-        <div><button class="button" onclick=exportChar()> Export </button></div>
-        <input type="file" id="importChar" accept=".json" hidden />
-        <label class="alt-btn" id="readButton" for="importChar"> Import </label>
-    </footer>
+    <footer class=" footer">
+                            <div><button class="button" onclick=initializePage()> Initialize </button></div>
+                            <div><button class="button" onclick=exportChar()> Export </button></div>
+                            <input type="file" id="importChar" accept=".json" hidden />
+                            <label class="alt-btn" id="readButton" for="importChar"> Import </label>
+                            </footer>
 </div>
 
 </html>

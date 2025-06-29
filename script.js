@@ -10,8 +10,8 @@ function initializePage() {
     // Set names and careers to defaults
     document.getElementById("charName").value = localStorage.getItem("");
     document.getElementById("playerName").value = localStorage.getItem("");
-    document.getElementById("career1").value = localStorage.getItem("");
-    document.getElementById("career2").value = localStorage.getItem("");
+    document.getElementById("career1").selectedIndex = 0;
+    document.getElementById("career2").selectedIndex = 0;
 
     //Set ability scores to defaults
     ability.forEach(abilityItem);
@@ -43,8 +43,8 @@ function getStoredValues() {
     // Set names and careers
     document.getElementById("charName").value = localStorage.getItem("charName");
     document.getElementById("playerName").value = localStorage.getItem("playerName");
-    document.getElementById("career1").value = localStorage.getItem("career1");
-    document.getElementById("career2").value = localStorage.getItem("career2");
+    document.getElementById("career1").selectedIndex = localStorage.getItem("career1");
+    document.getElementById("career2").selectedIndex = localStorage.getItem("career2");
 
     // Set ability scores
     ability.forEach(abilityItem);
@@ -77,8 +77,8 @@ function setLocalStorage() {
     // Save names and careers
     localStorage.setItem("charName", document.getElementById("charName").value);
     localStorage.setItem("playerName", document.getElementById("playerName").value);
-    localStorage.setItem("career1", document.getElementById("career1").value);
-    localStorage.setItem("career2", document.getElementById("career2").value);
+    localStorage.setItem("career1", document.getElementById("career1").selectedIndex);
+    localStorage.setItem("career2", document.getElementById("career2").selectedIndex);
 
     // Save ability scores
     ability.forEach(abilityItem);
