@@ -15,23 +15,23 @@
     };
 </script>
 
-
 <div class="holy-grail-grid">
     <div class="header">
-        <div class="name">
-            <h2 style="text-align: center;">Character</h2>
+        <div>
+            <h2>Character</h2>
             <div align="center">
-                <input type="text" id="charName" style="width: 70%; text-align: center;" placeholder="Character Name"
+                <input type="text" id="charName" style="width: 12rem; text-align: center" placeholder="Character Name"
                     tabindex="1" onchange="setLocalStorage()">
             </div>
         </div>
-        <div class="logo">
-            <img src="/assets/knave-2e-logo.webp" alt="knave-2e-logo" height="63rem">
+        <div style="width: 33%">
+            <img src="/assets/knave-2e-logo.webp" alt="knave-2e-logo" class="resizable-image">
         </div>
-        <div class="user">
-            <h2 style="text-align: center;">Player</h2>
-            <div align="center"><input type="text" id="playerName" style="width: 70%; text-align: center;"
-                    placeholder="Player Name" tabindex="1" onchange="setLocalStorage()">
+        <div>
+            <h2>Player</h2>
+            <div align="center">
+                <input type="text" id="playerName" style="width: 12rem; text-align: center" placeholder="Player Name"
+                    tabindex="1" onchange="setLocalStorage()">
             </div>
         </div>
     </div>
@@ -43,110 +43,110 @@
                 <h4>INVENTORY</h4>
             </th>
             <tr>
-                <td><input type="checkbox" id="check-1" tabindex="21" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-1" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-1" placeholder="Slot 1" tabindex="1" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-11" tabindex="31" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-11" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-11" placeholder="Slot 11" tabindex="11" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-2" tabindex="22" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-2" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-2" placeholder="Slot 2" tabindex="2" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-12" tabindex="32" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-12" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-12" placeholder="Slot 12" tabindex="12" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-3" tabindex="23" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-3" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-3" placeholder="Slot 3" tabindex="3" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-13" tabindex="33" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-13" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-13" placeholder="Slot 13" tabindex="13" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-4" tabindex="24" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-4" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-4" placeholder="Slot 4" tabindex="4" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-14" tabindex="34" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-14" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-14" placeholder="Slot 14" tabindex="14" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-5" tabindex="25" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-5" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-5" placeholder="Slot 5" tabindex="5" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-15" tabindex="35" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-15" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-15" placeholder="Slot 15" tabindex="15" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-6" tabindex="26" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-6" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-6" placeholder="Slot 6" tabindex="6" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-16" tabindex="36" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-16" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-16" placeholder="Slot 16" tabindex="16" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-7" tabindex="27" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-7" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-7" placeholder="Slot 7" tabindex="7" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-17" tabindex="37" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-17" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-17" placeholder="Slot 17" tabindex="17" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-8" tabindex="28" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-8" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-8" placeholder="Slot 8" tabindex="8" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-18" tabindex="38" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-18" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-18" placeholder="Slot 18" tabindex="18" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-9" tabindex="29" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-9" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-9" placeholder="Slot 9" tabindex="9" onchange="setLocalStorage()"></td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-19" tabindex="39" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-19" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-19" placeholder="Slot 19" tabindex="19" onchange="setLocalStorage()">
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="check-10" tabindex="30" checked onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-10" checked onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-10" placeholder="Slot 10" tabindex="10" onchange="setLocalStorage()">
                 </td>
                 <td> &emsp; </td>
-                <td><input type="checkbox" id="check-20" tabindex="40" onchange="setLocalStorage()">
+                <td><input type="checkbox" id="check-20" onchange="setLocalStorage()">
                 </td>
                 <td><input type="text" id="slot-20" placeholder="Slot 20" tabindex="20" onchange="setLocalStorage()">
                 </td>
@@ -215,6 +215,7 @@
             </tr>
         </table>
     </section>
+
     <aside class="right-sidebar">
         <center>
             <table>
@@ -250,18 +251,20 @@
                     <td>&emsp;</td>
                 </tr>
                 <tr>
-                    <td colspan=2 style="text-align: center;"><b>Careers</b></td>
+                    <td colspan=2 style="text-align: center;">
+                        <h4>CAREERS</h4>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan=2>
-                        <select class="careers" id="career1" onchange="setLocalStorage()"">
+                        <select class="careers" id="career1" tabindex="56" onchange="setLocalStorage()"">
                             <option value="" selected> Choose 1st Career </option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td colspan=2>
-                        <select class=" careers" id="career2" onchange="setLocalStorage()"">
+                        <select class=" careers" id="career2" tabindex="57" onchange="setLocalStorage()"">
                             <option value="" selected> Choose 2nd Career </option>
                         </select>
                     </td>
@@ -269,6 +272,7 @@
             </table>
         </center>
     </aside>
+
     <footer class=" footer">
                             <div><button class="button" onclick=initializePage()> Initialize </button></div>
                             <div><button class="button" onclick=exportChar()> Export </button></div>
