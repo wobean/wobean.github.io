@@ -16,7 +16,7 @@
 </script>
 
 <div class="holy-grail-grid">
-    <div class="header">
+    <div class="header-content">
         <div>
             <h2>Character</h2>
             <div align="center">
@@ -36,8 +36,7 @@
         </div>
     </div>
 
-    <main class="main-content">
-
+    <div class="main-content">
         <table>
             <th colspan="5">
                 <h4>INVENTORY</h4>
@@ -152,9 +151,9 @@
                 </td>
             </tr>
         </table>
-    </main>
+    </div>
 
-    <section class="left-sidebar">
+    <div class="left-sidebar">
         <table class="table">
             <th colspan="2">
                 <h4>ABILITY SCORES</h4>
@@ -214,71 +213,61 @@
                 </td>
             </tr>
         </table>
-    </section>
+        <div>
+            <h4>ROLL FOR:</h4>
+            <div style="margin-bottom: 3px"><button class="button" onclick=rollAbilities()> Abilities </button></div>
+            <div style="margin-bottom: 3px"><button class="button" onclick=rollHP()> Hit Points </button></div>
+        </div>
+    </div>
 
-    <aside class="right-sidebar">
-        <center>
-            <table>
-                <tr>
-                    <td style="text-align: right;">Level &ensp;</td>
-                    <td><input type="number" id="level" min="1" max="10" tabindex="51" onchange="setLocalStorage()">
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">XP &ensp;</td>
-                    <td><input type="text" id="xp" style="width: 2.7rem; text-align: center;" tabindex="52"
-                            onchange="setLocalStorage()"></td>
-                </tr>
-                <tr style="line-height: 0.7em;">
-                    <td>&emsp;</td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">Max HP &ensp;</td>
-                    <td><input type="number" id="maxHp" min="1" max="75" tabindex="53" onchange="setLocalStorage()">
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">AC &ensp;</td>
-                    <td><input type="number" id="ac" min="11" max="31" tabindex="54" onchange="setLocalStorage()"></td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">Speed &ensp;</td>
-                    <td><input type="text" id="speed" style="width: 2.7rem; text-align: center;" tabindex="55"
-                            onchange="setLocalStorage()">
-                    </td>
-                </tr>
-                <tr style="line-height: 0.7em;">
-                    <td>&emsp;</td>
-                </tr>
-                <tr>
-                    <td colspan=2 style="text-align: center;">
-                        <h4>CAREERS</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan=2>
-                        <select class="careers" id="career1" tabindex="56" onchange="setLocalStorage()"">
-                            <option value="" selected> Choose 1st Career </option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan=2>
-                        <select class=" careers" id="career2" tabindex="57" onchange="setLocalStorage()"">
-                            <option value="" selected> Choose 2nd Career </option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-        </center>
-    </aside>
+    <div class="right-sidebar">
+        <table>
+            <tr>
+                <td style="text-align: right"> Level &ensp;</td>
+                <td><input type="number" id="level" min="1" max="10" tabindex="51" onchange="setLocalStorage()">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right"> XP &ensp;</td>
+                <td><input type="text" id="xp" style="width: 2.7rem; text-align: center;" tabindex="52"
+                        onchange="setLocalStorage()"></td>
+            </tr>
+            <tr style="line-height: 0.7em">
+                <td>&emsp;</td>
+            </tr>
+            <tr>
+                <td style="text-align: right"> Max HP &ensp;</td>
+                <td><input type="number" id="maxHp" min="1" max="75" tabindex="53" onchange="setLocalStorage()">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right"> AC &ensp;</td>
+                <td><input type="number" id="ac" min="11" max="31" tabindex="54" onchange="setLocalStorage()"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right"> Speed &ensp;</td>
+                <td><input type="text" id="speed" style="width: 2.7rem; text-align: center;" tabindex="55"
+                        onchange="setLocalStorage()">
+                </td>
+            </tr>
+        </table>
+        <div align="center">
+            <h4> CAREERS </h4>
+            <select id="career1" tabindex="56" onchange="setLocalStorage()">
+                <option value="" selected> Choose 1st Career </option>
+            </select>
+            <select id="career2" tabindex="57" onchange="setLocalStorage()">
+                <option value="" selected> Choose 2nd Career </option>
+            </select>
+        </div>
+    </div>
 
-    <footer class=" footer">
-                            <div><button class="button" onclick=initializePage()> Initialize </button></div>
-                            <div><button class="button" onclick=exportChar()> Export </button></div>
-                            <input type="file" id="importChar" accept=".json" hidden />
-                            <label class="alt-btn" id="readButton" for="importChar"> Import </label>
-                            </footer>
+    <div class=" footer-content">
+        <div><button class="button" onclick=initializePage()> Initialize </button></div>
+        <div><button class="button" onclick=exportChar()> Export </button></div>
+        <input type="file" id="importChar" accept=".json" hidden />
+        <label class="alt-btn" id="readButton" for="importChar"> Import </label>
+    </div>
 </div>
 
 </html>

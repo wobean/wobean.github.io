@@ -30,14 +30,13 @@ function initializePage() {
     //Set remaining fields to defaults
     document.getElementById("level").value = "1";
     document.getElementById("xp").value = "0";
-    document.getElementById("maxHp").value = "3";
+    document.getElementById("maxHp").value = "1";
     document.getElementById("ac").value = "11";
     document.getElementById("speed").value = "30";
 
     setLocalStorage();
     window.location.reload();
 }
-
 
 function getStoredValues() {
     // Set names and careers
@@ -128,6 +127,28 @@ for (var i = 0; i < 100; i++) {
     el.textContent = opt;
     el.value = i;
     select.appendChild(el);
+}
+
+function rollAbilities() {
+    const abSlots = [0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < 3; i++) {
+        const rndInt = Math.floor(Math.random() * 6) + 1;
+        abSlots[rndInt - 1]++;
+    }
+    for (let i = 0; i < 6; i++) {
+        localStorage.setItem(ability[i], Number(localStorage.getItem(ability[i])) + Number(abSlots[i]));
+        document.getElementById(ability[i]).value = localStorage.getItem(ability[i]);
+    }
+}
+
+function rollHP() {
+    let total = 0;
+    for (let i = 0; i < localStorage.getItem("level"); i++) {
+        const rndInt = Math.floor(Math.random() * 6) + 1;
+        total = total + rndInt;
+    }
+    localStorage.setItem("maxHp", total);
+    document.getElementById("maxHp").value = localStorage.getItem("maxHp");
 }
 
 // Export character sheet data to local file

@@ -6,10 +6,13 @@ body {
     background: rgba(250, 225, 112, 0.25);
 }
 
-h2,
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
 h4 {
     text-align: center;
-    margin-top: 0;
     margin-bottom: 0.3rem;
 }
 
@@ -41,7 +44,7 @@ button {
     font-family: copperplate;
     font-weight: lighter;
     font-size: 1.1rem;
-    color: rgb(0, 0, 0);
+    color: black;
     width: 8rem;
     background-color: rgb(255, 255, 255);
     border: 1.5px solid;
@@ -57,12 +60,30 @@ button:hover {
     color: white;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: copperplate;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: black;
+    width: 12rem;
+    padding: 3px;
+    text-align-last: center;
+    margin-bottom: 3px;
+    background-color: white;
+    border: 1.5px solid;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
 .alt-btn {
     font-family: copperplate;
     font-size: 1.1rem;
-    color: rgb(0, 0, 0);
+    color: black;
     width: 8rem;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border: 1.5px solid;
     border-radius: 1rem;
     cursor: pointer;
@@ -82,11 +103,12 @@ button:hover {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     max-width: 85%;
     max-height: 63px;
     width: auto;
     height: auto;
-    text-align: center;
 }
 
 /* grid container */
@@ -106,7 +128,7 @@ button:hover {
 }
 
 /* assign columns to grid areas */
-.header {
+.header-content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -114,28 +136,11 @@ button:hover {
     background: #f97171;
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-family: copperplate;
-    font-weight: lighter;
-    font-size: 1rem;
-    width: 12rem;
-    padding: 3px;
-    text-align-last: center;
-    margin-bottom: 0.15rem;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: 1.5px solid;
-    border-radius: .4rem;
-    cursor: pointer;
-}
-
 .left-sidebar {
     grid-area: left-sidebar;
     background: #f5d55f;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -144,6 +149,7 @@ select {
     grid-area: main-content;
     background: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -152,14 +158,16 @@ select {
     grid-area: right-sidebar;
     background: #c5ed77;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.footer {
+.footer-content {
     grid-area: footer;
     background: #72c2f1;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
