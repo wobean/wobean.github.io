@@ -102,12 +102,30 @@ function setLocalStorage() {
         localStorage.setItem(item, document.getElementById(item).value);
     }
 
-    //Check ability score total
+    //Check ability score total against level
     abTotal = 0;
+    let lvlLimit = 3 * Number(localStorage.getItem("level"));
     for (let i = 0; i < 6; i++) {
         abTotal = abTotal + Number(localStorage.getItem(ability[i]));
     }
-    console.log(abTotal)
+    if (abTotal > lvlLimit) {
+        Array.from(document.getElementsByClassName("valid-scores"))
+            .forEach((element) => element.style.color = "red");
+        Array.from(document.getElementsByClassName("valid-scores"))
+            .forEach((element) => element.style.fontWeight = "900");
+        Swal.fire({
+            title: "Warning:",
+            html: "A character is allowed only<br>3 ability points per level.",
+            // type: "warning",
+            confirmButtonColor: 'red',
+            allowOutsideClick: false
+        });
+    } else {
+        Array.from(document.getElementsByClassName("valid-scores"))
+            .forEach((element) => element.style.color = "black");
+        Array.from(document.getElementsByClassName("valid-scores"))
+            .forEach((element) => element.style.fontWeight = "normal");
+    }
 
     slot.forEach(slotItem);
     function slotItem(item) {
@@ -137,7 +155,6 @@ function rollAbilities() {
             title: "Notice:",
             text: "Character must be Level 1 to use this button.",
             confirmButtonColor: 'green',
-            confirmButtonText: "OK",
             allowOutsideClick: false
         });
     }

@@ -125,15 +125,6 @@ select {
     height: auto;
 }
 
-.valid-scores {
-    color: black;
-}
-
-.invalid-scores {
-    color: red;
-    font-weight: bold;
-}
-
 /* grid container */
 .holy-grail-grid {
     display: grid;
