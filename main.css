@@ -49,6 +49,7 @@ input[type='checkbox'] {
 input[type='text'] {
     font-family: "Arial Narrow", sans-serif;
     font-size: 1.1rem;
+    width: 160px;
 }
 
 button {
