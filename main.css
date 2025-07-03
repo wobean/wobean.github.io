@@ -186,6 +186,18 @@ select {
     justify-content: space-evenly;
 }
 
+/* phone breakpoint */
+@media (min-width:200px) {
+    .holy-grail-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'header header'
+            'left-sidebar right-sidebar'
+            'main-content main-content'
+            'footer footer';
+    }
+}
+
 /* tablet breakpoint */
 @media (min-width:400px) {
     .holy-grail-grid {
