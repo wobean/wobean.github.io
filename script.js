@@ -5,6 +5,7 @@ const careerList = "Acolyte,Acrobat,Actor,Alchemist,Antiquarian,Arcanist,Archite
 const careerArray = Array.from(careerList.split(","));
 const select1 = document.getElementById("career1");
 const select2 = document.getElementById("career2");
+let abTotal = 0;
 
 //Populate the slot and checkbox arrays with element ids
 for (let i = 1; i <= 20; i++) {
@@ -101,6 +102,13 @@ function setLocalStorage() {
         localStorage.setItem(item, document.getElementById(item).value);
     }
 
+    //Check ability score total
+    abTotal = 0;
+    for (let i = 0; i < 6; i++) {
+        abTotal = abTotal + Number(localStorage.getItem(ability[i]));
+    }
+    console.log(abTotal)
+
     slot.forEach(slotItem);
     function slotItem(item) {
         localStorage.setItem(item, document.getElementById(item).value);
@@ -112,7 +120,7 @@ function setLocalStorage() {
     }
 }
 
-// Roll and assign starting ability scores (only at level 1)
+// Roll and assign level 1 (only) ability scores
 function rollAbilities() {
     const abSlots = [0, 0, 0, 0, 0, 0];
     for (let i = 0; i < 3; i++) {
@@ -125,13 +133,13 @@ function rollAbilities() {
             document.getElementById(ability[i]).value = localStorage.getItem(ability[i]);
         }
     } else {
-        alert("               Character must be Level 1 to use this button.");
-    }
-
-    //Check ability score total
-    let abTotal = 0;
-    for (let i = 0; i < 6; i++) {
-        abTotal = abTotal + Number(localStorage.getItem(ability[i]));
+        Swal.fire({
+            title: "Notice:",
+            text: "Character must be Level 1 to use this button.",
+            confirmButtonColor: 'green',
+            confirmButtonText: "OK",
+            allowOutsideClick: false
+        });
     }
 }
 
