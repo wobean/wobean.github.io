@@ -1,6 +1,5 @@
 body {
     font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
-    font-weight: lighter;
     font-size: calc(16px + 0.390625vw);
     background: rgba(250, 225, 112, 0.25);
 }
@@ -43,7 +42,7 @@ input[type='checkbox'] {
 input[type='text'] {
     font-family: "Arial Narrow", sans-serif;
     font-size: 1.2rem;
-    width: 7.5rem;
+    width: 7rem;
 }
 
 button {
@@ -86,6 +85,7 @@ select {
 
 .alt-btn {
     font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
+    font-weight: lighter;
     font-size: 1.2rem;
     color: black;
     width: 8rem;
@@ -105,21 +105,12 @@ select {
     color: white;
 }
 
-.resizable-logo {
+.logo {
     font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
-    font-size: 2rem;
+    font-size: 5vw;
     color: white;
-    /* display: inline-block; */
-    vertical-align: middle;
-    /* height: 100%; */
-    /* display: flex; */
-    /* margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto; */
-    max-height: 60px;
-    /* width: auto;
-    height: auto; */
+    align-content: center;
+    text-align: center;
 }
 
 /* grid container */
