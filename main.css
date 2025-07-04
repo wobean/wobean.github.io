@@ -1,5 +1,5 @@
 body {
-    font-family: copperplate;
+    font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
     font-weight: lighter;
     font-size: calc(15px + 0.390625vw);
     padding: calc(0px + 0.5625vw);
@@ -49,15 +49,15 @@ input[type='checkbox'] {
 input[type='text'] {
     font-family: "Arial Narrow", sans-serif;
     font-size: 1.1rem;
-    width: 160px;
+    width: 9rem;
 }
 
 button {
-    font-family: copperplate;
+    font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
     font-weight: lighter;
     font-size: 1.1rem;
     color: black;
-    width: 8rem;
+    width: 7.5rem;
     background-color: rgb(255, 255, 255);
     border: 1.5px solid;
     border-radius: 1rem;
@@ -76,22 +76,22 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: copperplate;
+    font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
     font-weight: lighter;
     font-size: 1.1rem;
     color: black;
-    width: 12rem;
+    width: 9rem;
     padding: 3px;
     text-align-last: center;
     margin-bottom: 3px;
     background-color: white;
     border: 1.5px solid;
-    border-radius: .4rem;
+    border-radius: .3rem;
     cursor: pointer;
 }
 
 .alt-btn {
-    font-family: copperplate;
+    font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
     font-size: 1.1rem;
     color: black;
     width: 8rem;
