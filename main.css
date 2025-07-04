@@ -1,7 +1,7 @@
 body {
     font-family: Copperplate, "Copperplate Gothic Light", "Copperplate Gothic Bold", fantasy;
     font-weight: lighter;
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(14px + 0.390625vw);
     padding: calc(0px + 0.5625vw);
     background: rgba(250, 225, 112, 0.25);
 }
