@@ -8,8 +8,8 @@ h2 {
     display: block;
     font-size: 1.5em;
     text-align: center;
-    margin-top: 0rem;
-    margin-bottom: 0.1rem;
+    margin-top: 0;
+    margin-bottom: 0.15rem;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
@@ -19,7 +19,7 @@ h4 {
     display: block;
     font-size: 1em;
     text-align: center;
-    margin-top: 1.33rem;
+    margin-top: 0;
     margin-bottom: 0.15rem;
     margin-left: 0;
     margin-right: 0;
@@ -31,7 +31,7 @@ input[type='number'] {
     font-size: 1.2rem;
     text-align: center;
     width: 2.5rem;
-    padding-left: .6rem;
+    padding-left: 0.6rem;
 }
 
 input[type='checkbox'] {
@@ -79,7 +79,7 @@ select {
     margin-bottom: 3px;
     background-color: white;
     border: 1.5px solid;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     cursor: pointer;
 }
 
